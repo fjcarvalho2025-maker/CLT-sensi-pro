@@ -1,0 +1,13 @@
+workflows:
+  flutter-android:
+    name: CLT Sensi Pro Android
+    max_build_duration: 60
+    environment:
+      flutter: stable
+    scripts:
+      - name: Get dependencies
+        script: flutter pub get
+      - name: Build AAB
+        script: flutter build appbundle
+    artifacts:
+      - build/app/outputs/bundle/release/app-release.aab
