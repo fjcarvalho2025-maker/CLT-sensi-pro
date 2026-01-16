@@ -7,7 +7,7 @@ workflows:
     scripts:
       - name: Get dependencies
         script: flutter pub get
-      - name: Build AAB
-        script: flutter build appbundle
+      - name: Build APK
+  script: flutter build apk
     artifacts:
-      - build/app/outputs/bundle/release/app-release.aab
+  - build/app/outputs/flutter-apk/app-release.apk
